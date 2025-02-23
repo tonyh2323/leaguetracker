@@ -1,20 +1,23 @@
 import React from 'react'
-import Background from "./Images/Backgroundimage.jpg";
+import Backgroundimg from "./Images/Backgroundimage.jpg";
 
 export default function Backgroundpic() {
   return (
-    <div style={{ backgroundImage:`url(${Background})` , backgroundRepeat:"no-repeat",
+    <div style={{ backgroundImage:`url(${Backgroundimg})` , 
+    backgroundRepeat:"no-repeat",
     backgroundAttachment: "fixed",
     backgroundSize: "cover",
     height: "100vh",
     marginTop: "0px",
     marginBottom: "0px",
-    marginRight: "-100%",
     padding: "0",
-    marginLeft: "-90%",
+    marginLeft: "-16vw",
     borderLeft: "0",
-    fontSize: "50px"}}>
-      
-    </div>
-  );
+    fontSize: "50px",
+    width:"100vw"
+      }
+    }/>
+    
+  )
+  
 }

@@ -1,17 +1,14 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: #fff;
-    width:100%;
-    left: 0;
-    right: 0;
-    margin-Right: 120rem;
-    margin-Left: 0rem;
-    padding: 1rem;
-    position: fixed;
-  }
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  background-color: #333;
+  padding: 1rem;
+  position: top;
+  margin-left:-19.2rem;
+  margin-right: -21rem;
+  margin-top: -2rem;
+}
   
   .navbar-left .logo {
     font-size: 1.5rem;
