@@ -1,7 +1,6 @@
 import React from 'react';
 import './Navbar.css';
-import About from './About';
-import Players from './Players';
+
 
 const Navbar = () => {
   return (
@@ -15,11 +14,11 @@ const Navbar = () => {
         <ul className="nav-links">
         <li><a href="/">Home</a></li>
           <li><a href="./Players">Players</a></li>
-          <li><a href="./Players">Parents</a></li>
-          <li><a href="./Players">Coaches</a></li>
+          <li><a href="./Parents">Parents</a></li>
+          <li><a href="./Coaches">Coaches</a></li>
           <li><a href="./About">About Us</a></li>
-          <li><a href="./Players">Contact</a></li>
-          <li><a href="./Players">Login</a></li>
+          <li><a href="./Contact">Contact</a></li>
+          <li><a href="./Login">Login</a></li>
         </ul>
       </div>
 
