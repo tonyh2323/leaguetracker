@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navbar.css';
-
+import About from './About';
 
 const Navbar = () => {
   return (
@@ -16,14 +16,18 @@ const Navbar = () => {
           <li><a href="./Players">Players</a></li>
           <li><a href="./Parents">Parents</a></li>
           <li><a href="./Coaches">Coaches</a></li>
-          <li><a href="./About">About Us</a></li>
+          <li><a href="./About">About</a></li>
           <li><a href="./Contact">Contact</a></li>
           <li><a href="./Login">Login</a></li>
         </ul>
       </div>
-
+ 
     </nav>
   );
 };
+
+
+
+
 
 export default Navbar;

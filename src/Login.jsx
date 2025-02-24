@@ -1,12 +1,19 @@
 import React from 'react';
-
+import "./App.css";
 
 
 export default function LOGIN(){
     return(
-        <div>
-        <h1>This is the lOGIN screen</h1>
-        <P>This paragraph is in here so that I can see something on the Login screen.</P>
-        </div>
+        <>
+            <p className="title">Registration Form</p>
+
+            <form className="App">
+                <input type="text" />
+                <input type="email" />
+                <input type="password" />
+                <input type={"submit"}
+                    style={{ backgroundColor: "#a1eafb" }} />
+            </form>
+        </>
     )
 }

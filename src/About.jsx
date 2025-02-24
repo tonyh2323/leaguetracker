@@ -3,7 +3,10 @@ import React from 'react';
 
 
 export default function About(){
-    return(
+    return (
+    <>
         <h1>This is the About screen</h1>
-    )
+        
+    </>
+);
 }
