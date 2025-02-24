@@ -2,11 +2,19 @@ import React from 'react';
 
 
 
-export default function About(){
+const About = () => {
     return (
-    <>
-        <h1>This is the About screen</h1>
-        
-    </>
-);
-}
+        <>
+        <div className="container">
+        <div className="bottom-left">Bottom Left</div>
+        <div className="top-left">Top Left</div>
+        <div className="top-right">Top Right</div>
+        <div className="bottom-right">Bottom Right</div>
+        <div className="centered">Centered</div>
+      </div>
+      <p> Hello World</p>>
+      </>
+    );
+};
+
+export default About;

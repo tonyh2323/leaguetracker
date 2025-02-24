@@ -1,6 +1,16 @@
 import React from 'react';
 import './Navbar.css';
 import About from './About';
+import Players from './Players';
+import Coaches from './Coaches';
+import Parents from './Parents';
+import Contact from './Contact';
+import Login from "./Login";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -10,17 +20,17 @@ const Navbar = () => {
           LeagueTracker
         </a>
       </div>
-      <div className="navbar-center">
-        <ul className="nav-links">
-        <li><a href="/">Home</a></li>
-          <li><a href="./Players">Players</a></li>
-          <li><a href="./Parents">Parents</a></li>
-          <li><a href="./Coaches">Coaches</a></li>
-          <li><a href="./About">About</a></li>
-          <li><a href="./Contact">Contact</a></li>
-          <li><a href="./Login">Login</a></li>
-        </ul>
-      </div>
+      <Router>
+            
+            <Routes>
+                <Route path="/Players" element={<Players />} />
+                <Route path="/Coaches" element={<Coaches />}/>
+                <Route path="/Parents" element={<Parents />} />
+                <Route path="/contact" element={<Contact />}/>
+                <Route path="/about" element={<About />} />
+                <Route path="/Login" element={<Login />}/>
+            </Routes>
+        </Router>
  
     </nav>
   );
