@@ -9,10 +9,9 @@ import Footer from './Footer'
 function App() {
   return (
     <>
-    <Backgroundpic />
-   <Navbar/>
-  
-     <Footer />
+      <Navbar/>
+      <Backgroundpic />
+      <Footer />
     </>
   )
 }
