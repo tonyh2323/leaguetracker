@@ -4,13 +4,11 @@ import './Navbar.css';
 
 import { BrowserRouter as Router, Routes, Route,} from "react-router-dom";
 
-const Navbar = () => {
+const Navbar1 = () => {
   return (
-    <nav className="navbar">
-      <div className="navbar-left">
-        <a href="/" className="logo">LeagueTracker</a>
-      </div>
-    </nav>
+    <>
+    <P>this was the old Navbar function</P>
+    </>
   );
 };
 
@@ -18,4 +16,4 @@ const Navbar = () => {
 
 
 
-export default Navbar;
+export default Navbar1;

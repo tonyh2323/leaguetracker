@@ -1,14 +1,13 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   background-color: red;
   color: #fff;
   padding: 1rem;
-  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
+  position: fixed;
 }
 
 #Footer{
