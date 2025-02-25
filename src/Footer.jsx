@@ -4,7 +4,7 @@ import './Navbar.css';
 
 export default function Footer(){
     return(
-        <div id="Footer">
+        <div className="Footer">
         <p>LeagueTracker was designed and built by Anthony Hernandez  Copyright 2025.</p>
         
         </div>

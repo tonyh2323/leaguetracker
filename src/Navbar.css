@@ -14,14 +14,13 @@
 
 
 }
-.list{
+.logo {
+  height: 6em;
+  font-size: 20px;
   color:white;
-  display: block;
-  align-items: center;
-  list-style-type:none;
-  justify-content: space-between;
-  float: left;
-  
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
 }
 
 ul {
@@ -47,11 +46,9 @@ li a {
 /* Change the link color to #111 (black) on hover */
 li a:hover {
   background-color: #111;
+}
 
-
-
-
-#Footer{
+.Footer{
   font-size: 12px;
  position:fixed;
   text-align: center;
@@ -63,11 +60,4 @@ li a:hover {
   
   
 }
-.logo {
-  height: 6em;
-  font-size: 40px;
-  color:white;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
+
