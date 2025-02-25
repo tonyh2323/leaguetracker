@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: red;
   color: #fff;
   padding: 1rem;
   position: fixed;
@@ -16,7 +16,7 @@
  position:fixed;
   text-align: center;
   color: white;
-  background-color: #333;
+  background-color: red;
   left: 0;
   bottom: 0;
   width: 100%;

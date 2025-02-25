@@ -5,7 +5,7 @@ import React from 'react';
 const Coaches = () => {
     return (
        <>
-            <p> Hello World</p>>
+            <p> Hello World</p>
       </>
     );
 };

@@ -5,7 +5,7 @@ import React from 'react';
 const Contact = () => {
     return (
        <>
-            <p> Hello World Contact</p>>
+            <p> Hello World Contact</p>
       </>
     );
 };
