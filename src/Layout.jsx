@@ -4,7 +4,11 @@ const Layout = () => {
   return (
     <>
       <nav className="navNew">
-        <ul>
+      <div className="navbar-left">
+          <a href="/" className="logo">LeagueTracker</a>
+        </div>
+        
+        <ul className="list">
           <li>
             <Link to="/">Home</Link>
           </li>

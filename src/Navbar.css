@@ -1,17 +1,55 @@
-.navNew{
+.navNew {
   background-color: red;
   padding:  10px 20px;
-  display:flex;
+  display: flex ;
   justify-content:space-between;
   align-items: center;
   gap: 40px;
   min-height: 70px;
-  color: #fff;
-  width: 100%;
+  width: auto;
   top: 0;
   left: 0;
+  list-style-type: none;
+  
+
+
+}
+.list{
+  color:white;
+  display: block;
+  align-items: center;
+  list-style-type:none;
+  justify-content: space-between;
+  float: left;
   
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+
+
+
 
 #Footer{
   font-size: 12px;
@@ -22,10 +60,13 @@
   left: 0;
   bottom: 0;
   width: 100%;
+  
+  
 }
 .logo {
   height: 6em;
-  color:blue;
+  font-size: 40px;
+  color:white;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;

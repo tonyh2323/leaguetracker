@@ -20,10 +20,9 @@ function App() {
     <>
     <nav className="navbar">
     <Router>
-        <div className="navbar-left">
-          <a href="/" className="logo">LeagueTracker</a>
-        </div>
-    <Layout />
+       <Layout />
+
+   
     </Router>
     </nav>
     <Backgroundpic />
