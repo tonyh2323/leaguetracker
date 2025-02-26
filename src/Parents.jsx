@@ -1,13 +1,10 @@
 import React from 'react';
-import Layout from './Layout';
+
 const Parents = () => {
-    return (
+  return (
     <>
     <p> This is the Parents page that I created</p>
-    <Layout />
-    
     </>
-      
   )
     
 };

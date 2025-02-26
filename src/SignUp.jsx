@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from './Layout';
+
 
 const SignUp = () => {
     return(
@@ -13,7 +13,6 @@ const SignUp = () => {
                 <input type={"submit"}
                     style={{ backgroundColor: "#a1eafb" }} />
             </form>
-             <Layout />
         </>
     )
 };
