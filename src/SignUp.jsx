@@ -1,5 +1,5 @@
 import React from 'react';
-
+import BackgroundRemove from './BackgroundRemove'
 
 const SignUp = () => {
     return(
@@ -13,7 +13,9 @@ const SignUp = () => {
                 <input type={"submit"}
                     style={{ backgroundColor: "#a1eafb" }} />
             </form>
+             <BackgroundRemove />
         </>
+        
     )
 };
 export default SignUp;

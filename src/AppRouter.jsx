@@ -6,10 +6,12 @@ import Coaches from './Coaches';
 import Parents from './Parents';
 import Contact from './Contact';
 import About from './About';
-import Login from './Login';
+
 import SignUp from './SignUp';
 import Home from './Home';
 import NotFound from './NotFound';
+import {Login} from './Login';
+
 
 export default function AppRouter() {
     return (
