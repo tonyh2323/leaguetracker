@@ -1,7 +1,7 @@
 import BackgroundRemove from './BackgroundRemove'
 import React, {useState} from 'react';
 
-export const Register = () =>{
+export const Register = (props) =>{
         const [email, setEmail] = useState('');
         const [pass, setPass] = useState('');
         const [name, setName] = useState('');
@@ -21,9 +21,11 @@ export const Register = () =>{
             <label htmlFor='password'>password</label>
             <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="*****" id="password"name="password"/>
             <button type="Submit">Register</button>
-         </form>
-         <button className="link-btn" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</button>
-        <BackgroundRemove />
+         <button className="link-btn" onClick={() =>  props.onFormSwitch('login')}>Already have an account? Login here.</button>
+            
+        </form>
+
+       
         </div>
     )
         }
