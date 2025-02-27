@@ -27,13 +27,7 @@ function App() {
         currentForm === 'login' ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
       }
       
-      <BrowserRouter>
-        <Navbar />
-        <AppRouter />
-      </BrowserRouter>
-      <Backgroundpic />
-      <Footer />
-      <Outlet />
+
     </div>
   )
 }
