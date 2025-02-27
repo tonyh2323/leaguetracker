@@ -1,10 +1,4 @@
-.auth-form-container, .login-form, .register-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: 'center';
-    align-items: 'center';
-   
-}
+
 .App {
     text-align: center;
    display: flex;
@@ -13,9 +7,14 @@
     justify-content: center;
     color: white;
     background-image: linear-gradient(79deg, #7439db, #c66fbc 48%, #f7944d );
-    zIndex: 10,
+ 
 }
+.auth-form-container, .login-form, .register-form {
+    display: flex;
+    flex-direction: column;
 
+   
+}
 
 @media screen and (min-width: 250px){
 .auth-form-container {
@@ -41,12 +40,13 @@ input {
     padding: 1 rem;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 button {
     border: none;
     background-color: white;
-    padding: 10px 2px 2px 2px;
+    padding: 10px;
     border-radius:10px;
     cursor: pointer;
     color: #7439db;
@@ -55,6 +55,6 @@ button {
 
 .link-btn {
    
-    color: brown;
+    color: blue;
     text-decoration: underline;
 }

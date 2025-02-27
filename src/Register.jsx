@@ -1,10 +1,14 @@
 import BackgroundRemove from './BackgroundRemove'
 import React, {useState} from 'react';
+import login from './login';
+import { useNavigate } from 'react-router-dom';
 
 export const Register = (props) =>{
         const [email, setEmail] = useState('');
         const [pass, setPass] = useState('');
         const [name, setName] = useState('');
+
+        const navigate = useNavigate();
 
         const handleSubmit = (e) =>{
             e.preventDefault();
@@ -21,7 +25,7 @@ export const Register = (props) =>{
             <label htmlFor='password'>password</label>
             <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="*****" id="password"name="password"/>
             <button type="Submit">Register</button>
-         <button className="link-btn" onClick={() =>  props.onFormSwitch('login')}>Already have an account? Login here.</button>
+            <button className="link-btn" onClick={() => navigate("/login")}>Already have an account? Login here.</button>
             
         </form>
 

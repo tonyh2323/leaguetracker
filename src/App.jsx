@@ -19,21 +19,16 @@ function App() {
   const toggleForm = (formName) => {
     setCurrentForm(formName);
   }
-
   return (
 
     <div className="App">
       <BrowserRouter>
-      <Navbar />
-      <AppRouter />
-      </BrowserRouter>
-      
      
-
+        <Navbar />
+        <AppRouter />
+      </BrowserRouter>
       <Footer />
     </div>
-
-    
   )
 }
 
