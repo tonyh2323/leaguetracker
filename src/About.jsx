@@ -5,7 +5,7 @@ const About = () => {
       
       <>
         <p> This is the About page that I created</p>
-        <BackgroundRemove />
+      
 
         
       </>

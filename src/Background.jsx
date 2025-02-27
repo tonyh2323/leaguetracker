@@ -8,8 +8,8 @@ export default function Backgroundpic() {
     backgroundSize: "cover",
     backgroundRepeat:"no-repeat",
     width:"100vw",
-    height: "80vh"
-    
+    height: "80vh",
+    zIndex: 1,
       }
     }/>
     

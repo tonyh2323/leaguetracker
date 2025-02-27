@@ -4,7 +4,7 @@ import { Outlet , BrowserRouter} from "react-router-dom";
 import Login from './Login';
 import  Register  from './Register';
 import './App.css';
-//mport './Navbar.css';
+import './Navbar.css';
 
 
 import Backgroundpic from './Background';
@@ -23,12 +23,17 @@ function App() {
   return (
 
     <div className="App">
-      {
-        currentForm === 'login' ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
-      }
+      <BrowserRouter>
+      <Navbar />
+      <AppRouter />
+      </BrowserRouter>
       
+     
 
+      <Footer />
     </div>
+
+    
   )
 }
 

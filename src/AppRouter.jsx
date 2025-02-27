@@ -6,6 +6,7 @@ import Coaches from './Coaches';
 import Parents from './Parents';
 import Contact from './Contact';
 import About from './About';
+import Register from './Register';
 
 import SignUp from './SignUp';
 import Home from './Home';
@@ -24,7 +25,7 @@ export default function AppRouter() {
             <Route path="/Contact" element={<Contact />} />
             <Route path="/About" element={<About />} />
             <Route path="/Login" element={<Login />} />
-            <Route path="/SignUp" element={<SignUp />} />
+            <Route path="/Register" element={<Register />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
     
