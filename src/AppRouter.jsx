@@ -7,7 +7,7 @@ import Parents from './Parents';
 import Contact from './Contact';
 import About from './About';
 import Register from './Register';
-
+import PasswordValidation from './PasswordValidation';
 import SignUp from './SignUp';
 import Home from './Home';
 import NotFound from './NotFound';
@@ -26,6 +26,7 @@ export default function AppRouter() {
             <Route path="/About" element={<About />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/Register" element={<Register />} />
+            <Route path="PasswordValidation" element={<PasswordValidation />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
     
