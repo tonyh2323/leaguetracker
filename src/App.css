@@ -41,6 +41,7 @@ input {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    height:20px;
 }
 
 button {
