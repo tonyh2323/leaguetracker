@@ -5,12 +5,13 @@ import Login from './Login';
 import  Register  from './Register';
 import './App.css';
 import './Navbar.css';
-
+import Header from './Header';
 
 import Backgroundpic from './Background';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import AppRouter from './AppRouter';
+import Greeting from './Greeting';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
   return (
 
     <div className="App">
+     
       <BrowserRouter>
      
         <Navbar />

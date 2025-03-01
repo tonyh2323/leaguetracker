@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-
+import Header from './Header';
 const Navbar = () => {
     return (
         <nav className="navNew">
+            
             <div className="navbar-left">
                 <a href="/" className="logo">LeagueTracker</a>
             </div>

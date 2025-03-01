@@ -1,6 +1,6 @@
 import BackgroundRemove from './BackgroundRemove'
 import React, {useState} from 'react';
-import login from './login';
+import login from './Login';
 import { useNavigate } from 'react-router-dom';
 
 export const Register = (props) =>{
@@ -13,6 +13,8 @@ export const Register = (props) =>{
         const handleSubmit = (e) =>{
             e.preventDefault();     
 
+
+
         const form = document.querySelector("form");
         form.addEventListener('submit', (event) => {
             const password = event.target.password.value;
@@ -21,7 +23,7 @@ export const Register = (props) =>{
                 event.preventDefault();
             }
         });
-    
+
     }
 
     return (
@@ -43,6 +45,21 @@ export const Register = (props) =>{
         function PasswordValidation(pass) {
             const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
             return regex.test(pass);
-        }
-}
-        export default Register;
+
+         /*this is not working
+         function HashPassword(pass) {
+
+         const bcrypt = require('bcrypt');
+         const saltRounds = 10;
+         const plainTextPassword = 'pass';
+         bcrypt.hash(plainTextPassword, saltRounds, (err, hash) => {
+             if (err) throw err;
+             // Store hash in your password database.
+             console.log('Hashed Password:', hash);
+         });*/
+
+         };
+
+    }
+
+export default Register;
