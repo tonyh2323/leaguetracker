@@ -14,9 +14,9 @@ export  const Login = (props) =>{
     const handleSubmit = (e) =>{
         e.preventDefault();
 
-    const form = document.querySelector(pass);
+    const form = document.querySelector("form");
         form.addEventListener('submit', (event) => {
-            const password = pass;
+            const password = event.target.password.value;
             if (!PasswordValidation(password)) {
                 alert('Password does not meet security criteria.');
                 event.preventDefault();
