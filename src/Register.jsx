@@ -13,7 +13,19 @@ export const Register = (props) =>{
         const handleSubmit = (e) =>{
             e.preventDefault();
             console.log(email);
-        }
+        
+
+        const form = document.querySelector("form");
+        form.addEventListener('submit', (event) => {
+            const password = event.target.password.value;
+            if (!PasswordValidation(password)) {
+                alert('Password does not meet security criteria.');
+                event.preventDefault();
+            }
+        });
+    
+    }
+
     return (
         <div className='auth-form-container'>
             <h2>Register</h2>
@@ -22,9 +34,9 @@ export const Register = (props) =>{
             <input value={name} onChange={(e) => setName(e.target.value)} name='name' id='name' placeholder='full Name'/>
             <label htmlFor='email'>email</label>
             <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youemail@gmail.com" id="email"name="email"/>
-            <label htmlFor='password'>password</label>
+            <label htmlFor='password'>password. A mixture of uppercase and lowercase letters, numbers, and special characters are required.</label>
             <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="*****" id="password"name="password"/>
-            <button type="Submit">Register</button>
+            <button type="Submit" onClick={PasswordValidation}>Register</button>
             <button className="link-btn" onClick={() => navigate("/login")}>Already have an account? Login here.</button>
             
         </form>
@@ -32,5 +44,12 @@ export const Register = (props) =>{
        
         </div>
     )
+
+
+        function PasswordValidation(pass) {
+            const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            return regex.test(pass);
         }
-        export default Register
+
+}
+        export default Register;
