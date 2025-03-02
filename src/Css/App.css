@@ -59,3 +59,8 @@ button {
     color: blue;
     text-decoration: underline;
 }
+.side-by-side {
+    display: flex;
+    flex-direction: column;
+  
+  }

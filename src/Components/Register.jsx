@@ -33,10 +33,13 @@ export const Register = (props) =>{
         <div className='auth-form-container'>
             <h2>Register</h2>
             <form className='register-form' onSubmit={handleSubmit} >
-                <label htmlFor='first'>First Name</label>
-                <input required value={first} onChange={(e) => setName(e.target.value)} name='fisrt' id='first' placeholder='First Name'/>
-                <label htmlFor='last'>Last Name</label>
-                <input required value={last} onChange={(e) => setlast(e.target.value)} name='last' id='last' placeholder='Last Name'/>
+                  
+            <label htmlFor='first'>First Name, Last Name</label>
+                <div className="side-by-side">
+                    <input required value={first} onChange={(e) => setName(e.target.value)} name='fisrt' id='first' placeholder='First Name'/>
+                    <input required value={last} onChange={(e) => setlast(e.target.value)} name='last' id='last' placeholder='Last Name'/>
+                </div>
+
                 <label htmlFor='email'>email</label>
                 <input required value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youemail@gmail.com" id="email"name="email"/>
                 <label htmlFor='password'>A mixture of uppercase and lowercase letters, numbers, and special characters along with 8 units in length are required for the password.</label>
