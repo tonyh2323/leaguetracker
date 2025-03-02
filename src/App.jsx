@@ -3,8 +3,8 @@ import {React , useState }from 'react';
 import { Outlet , BrowserRouter} from "react-router-dom";
 import Login from './Login';
 import  Register  from './Register';
-import './App.css';
-import './Navbar.css';
+import './css/App.css';
+import './css/Navbar.css';
 import Header from './Header';
 
 import Backgroundpic from './Background';

@@ -1,6 +1,7 @@
 import BackgroundRemove from './BackgroundRemove'
 import React, {useState} from 'react';
 import login from './Login';
+import Home from './Home';
 import { useNavigate } from 'react-router-dom';
 import PasswordValidation from './PasswordValidation';
 
@@ -41,16 +42,7 @@ export const Register = (props) =>{
                 <button className="link-btn" onClick={() => navigate("/login")}>Already have an account? Login here.</button>
                 
             </form>
-            
-            
         </div>
-        
     )
-
-
-  
 }
-
-    
-
 export default Register;

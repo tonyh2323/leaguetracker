@@ -8,7 +8,7 @@ import Contact from './Contact';
 import About from './About';
 import Register from './Register';
 
-import SignUp from './SignUp';
+
 import Home from './Home';
 import NotFound from './NotFound';
 import {Login} from './Login';
