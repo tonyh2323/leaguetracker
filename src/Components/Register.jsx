@@ -8,7 +8,8 @@ import PasswordValidation from './ChildComponents/PasswordValidation';
 export const Register = (props) =>{
         const [email, setEmail] = useState('');
         const [pass, setPass] = useState('');
-        const [name, setName] = useState('');
+        const [first, setfirst] = useState('');
+        const [last, setlast] = useState('');
 
         const navigate = useNavigate();
 
@@ -32,8 +33,10 @@ export const Register = (props) =>{
         <div className='auth-form-container'>
             <h2>Register</h2>
             <form className='register-form' onSubmit={handleSubmit} >
-                <label htmlFor='name'>Full Name</label>
-                <input required value={name} onChange={(e) => setName(e.target.value)} name='name' id='name' placeholder='full Name'/>
+                <label htmlFor='first'>First Name</label>
+                <input required value={first} onChange={(e) => setName(e.target.value)} name='fisrt' id='first' placeholder='First Name'/>
+                <label htmlFor='last'>Last Name</label>
+                <input required value={last} onChange={(e) => setlast(e.target.value)} name='last' id='last' placeholder='Last Name'/>
                 <label htmlFor='email'>email</label>
                 <input required value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youemail@gmail.com" id="email"name="email"/>
                 <label htmlFor='password'>A mixture of uppercase and lowercase letters, numbers, and special characters along with 8 units in length are required for the password.</label>
