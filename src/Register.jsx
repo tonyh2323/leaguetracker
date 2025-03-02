@@ -2,6 +2,7 @@ import BackgroundRemove from './BackgroundRemove'
 import React, {useState} from 'react';
 import login from './Login';
 import { useNavigate } from 'react-router-dom';
+import PasswordValidation from './PasswordValidation';
 
 export const Register = (props) =>{
         const [email, setEmail] = useState('');
@@ -36,15 +37,13 @@ export const Register = (props) =>{
                 <input required value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youemail@gmail.com" id="email"name="email"/>
                 <label htmlFor='password'>A mixture of uppercase and lowercase letters, numbers, and special characters along with 8 units in length are required for the password.</label>
                 <input required value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="*****" id="password"name="password"/>
-                <button type="Submit" onClick={PasswordValidation}>Register</button>
+                <button type="Submit" onClick={() => PasswordValidation(pass)}>Register</button>
                 <button className="link-btn" onClick={() => navigate("/login")}>Already have an account? Login here.</button>
                 
             </form>
         </div>
     )
-        function PasswordValidation(pass) {
-            const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-            return regex.test(pass);
+
 
          /*this is not working
          function HashPassword(pass) {
@@ -60,6 +59,6 @@ export const Register = (props) =>{
 
          };
 
-    }
+    
 
 export default Register;
