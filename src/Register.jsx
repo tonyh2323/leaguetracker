@@ -41,23 +41,15 @@ export const Register = (props) =>{
                 <button className="link-btn" onClick={() => navigate("/login")}>Already have an account? Login here.</button>
                 
             </form>
+            
+            
         </div>
+        
     )
 
 
-         /*this is not working
-         function HashPassword(pass) {
-
-         const bcrypt = require('bcrypt');
-         const saltRounds = 10;
-         const plainTextPassword = 'pass';
-         bcrypt.hash(plainTextPassword, saltRounds, (err, hash) => {
-             if (err) throw err;
-             // Store hash in your password database.
-             console.log('Hashed Password:', hash);
-         });*/
-
-         };
+  
+}
 
     
 
