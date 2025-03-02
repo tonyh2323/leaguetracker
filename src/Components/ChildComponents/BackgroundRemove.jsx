@@ -1,5 +1,5 @@
 import React from 'react'
-import Backgroundimg from "./Images/Backgroundimage.jpg";
+import Backgroundimg from "/src/Images/Backgroundimage.jpg";
 
 export default function BackgroundRemove() {
   return (

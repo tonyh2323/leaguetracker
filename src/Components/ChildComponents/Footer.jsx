@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/Navbar.css';
+import '/src/css/Navbar.css';
 
 
 export default function Footer(){

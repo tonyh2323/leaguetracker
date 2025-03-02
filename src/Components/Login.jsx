@@ -1,4 +1,4 @@
-import BackgroundRemove from './BackgroundRemove'
+import BackgroundRemove from './ChildComponents/BackgroundRemove'
 import React, {useState } from 'react';
 import Register from './Register';
 

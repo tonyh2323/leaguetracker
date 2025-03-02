@@ -1,17 +1,17 @@
 import React from 'react';
 import { BrowserRouter, Outlet, Routes, Route, Router } from "react-router-dom";
 
-import Players from './Players';
-import Coaches from './Coaches';
-import Parents from './Parents';
-import Contact from './Contact';
-import About from './About';
-import Register from './Register';
+import Players from '../Players';
+import Coaches from '../Coaches';
+import Parents from '../Parents';
+import Contact from '../Contact';
+import About from '../About';
+import Register from '../Register';
 
 
-import Home from './Home';
+import Home from '../Home';
 import NotFound from './NotFound';
-import {Login} from './Login';
+import {Login} from '../Login';
 
 
 export default function AppRouter() {

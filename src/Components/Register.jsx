@@ -1,9 +1,9 @@
-import BackgroundRemove from './BackgroundRemove'
+import BackgroundRemove from './ChildComponents/BackgroundRemove'
 import React, {useState} from 'react';
 import login from './Login';
 import Home from './Home';
 import { useNavigate } from 'react-router-dom';
-import PasswordValidation from './PasswordValidation';
+import PasswordValidation from './ChildComponents/PasswordValidation';
 
 export const Register = (props) =>{
         const [email, setEmail] = useState('');

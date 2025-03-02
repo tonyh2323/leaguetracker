@@ -1,17 +1,17 @@
 import {React , useState }from 'react';
 
 import { Outlet , BrowserRouter} from "react-router-dom";
-import Login from './Login';
-import  Register  from './Register';
+import Login from './Components/Login';
+import  Register  from './Components/Register';
 import './css/App.css';
 import './css/Navbar.css';
-import Header from './Header';
+import Header from './Components/ChildComponents/Header';
 
-import Backgroundpic from './Background';
-import Footer from './Footer';
-import Navbar from './Navbar';
-import AppRouter from './AppRouter';
-import Greeting from './Greeting';
+import Backgroundpic from './Components/ChildComponents/Background';
+import Footer from './Components/ChildComponents/Footer';
+import Navbar from './Components/Navbar';
+import AppRouter from './Components/ChildComponents/AppRouter';
+
 
 function App() {
 
