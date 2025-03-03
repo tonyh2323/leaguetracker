@@ -62,10 +62,10 @@ export const Register = (props) =>{
                 <button className="link-btn" onClick={() => navigate("/login")}>Already have an account? Login here.</button>
                 
             </form>
-            
-        
+           
+       
 
         </div>
-    )
+    ) 
 }
 export default Register;
