@@ -26,16 +26,11 @@ export const Register = (props) =>{
             if (!PasswordValidation(password)) {
                 alert('Password requires uppercase and lowercase letters, a number ,and a special character.  Password must be at least 8 units in length.');
                 event.preventDefault();
-               
             }
              else{
-                    
-                    
                     alert('Information has been saved');
                 }
-               
         });
-        <HashPassword password="{pass}" />
     }
 
     return (
