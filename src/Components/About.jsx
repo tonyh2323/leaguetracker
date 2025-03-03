@@ -1,5 +1,5 @@
 import React from 'react';
-import BackgroundRemove from './ChildComponents/BackgroundRemove'
+
 const About = () => {
     return (
       
