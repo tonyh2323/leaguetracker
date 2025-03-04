@@ -8,10 +8,10 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const config = {
-    user: 'your_username',
-    password: 'your_password',
-    server: 'your_server', // For example, localhost
-    database: 'your_database',
+    user: 'root',
+    password: 'root',
+    server: 'localhost', // For example, localhost
+    database: 'leaguetracker',
     options: {
         encrypt: true, // Use this if your SQL Server is on Azure
         trustServerCertificate: true // Change to false for production
@@ -19,7 +19,7 @@ const config = {
 };
 
 // Start the server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3306;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
