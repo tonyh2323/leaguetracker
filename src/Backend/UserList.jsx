@@ -4,7 +4,7 @@ const UserList = () => {
     const [users, setUsers] = useState([]);
 
     const fetchUsers = async () => {
-        const response = await fetch('http://localhost:5000/api/users');
+        const response = await fetch('http://localhost:3306/leaguetracker/users');
         const data = await response.json();
         setUsers(data);
     };

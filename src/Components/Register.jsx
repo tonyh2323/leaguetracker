@@ -28,8 +28,12 @@ export const Register = (props) =>{
                 event.preventDefault();
             }
              else{
-                    alert('Information has been saved');
-                }
+                
+                    
+                    alert('Hash completed I think so the Information has been saved');
+                    <HashPassword value={password}/>
+                
+                };
         });
     }
 
@@ -49,6 +53,7 @@ export const Register = (props) =>{
                 <label htmlFor='password'>A mixture of uppercase and lowercase letters, numbers, and special characters along with 8 units in length are required for the password.</label>
 
                 <input required value={pass} onChange={(e) => setPass(e.target.value)} type={isShown ? "text" : "password"} placeholder="*****" id="password"name="password"/>
+                
                 <div className="checkbox-container">
                     <label htmlFor="checkbox">Show password?</label>
                     <input
@@ -59,6 +64,8 @@ export const Register = (props) =>{
                     />
                 </div>
                 <button type="Submit" onClick={() => PasswordValidation(pass)}>Register</button>
+                
+                <HashPassword value={pass}/>
                 <button className="link-btn" onClick={() => navigate("/login")}>Already have an account? Login here.</button>
                 
             </form>
