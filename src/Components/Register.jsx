@@ -27,13 +27,7 @@ export const Register = (props) =>{
                 alert('Password requires uppercase and lowercase letters, a number ,and a special character.  Password must be at least 8 units in length.');
                 event.preventDefault();
             }
-             else{
-                
-                    
-                    alert('Hash completed I think so the Information has been saved');
-                    <HashPassword value={password}/>
-                
-                };
+
         });
     }
 
@@ -63,10 +57,10 @@ export const Register = (props) =>{
                         onChange={togglePassword}
                     />
                 </div>
-                <button type="Submit" onClick={() => PasswordValidation(pass)}>Register</button>
+                <button type="Submit" onClick={() => PasswordValidation(pass)}disabled={!first || !pass || !last || !email}>Register</button>
                 
                 <HashPassword value={pass}/>
-                <button className="link-btn" onClick={() => navigate("/login")}>Already have an account? Login here.</button>
+                <button className="link-btn" onClick={() => navigate("/login")}disabled={!first || !pass || !last || !email}>Already have an account? Login here.</button>
                 
             </form>
            
