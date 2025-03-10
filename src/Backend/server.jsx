@@ -18,7 +18,19 @@ const config = {
     }
 };
 
+//transactions for the user table
 
+//add a user
+app.post("/add_user", (req, res) => {
+    const sql =
+      "INSERT INTO user (`Username`,'PasswordHash', 'PasswordSalt', 'HashAlgorithId', `Email`) VALUES (?, ?, ?, ?, ?)";
+    const values = [req.body.username, req.body.passwordhash, req.body.passwordsalt, req.body.hashalgorithid,req.body.email];
+    db.query(sql, values, (err, result) => {
+      if (err)
+        return res.json({ message: "Something unexpected has occured" + err });
+      return res.json({ success: "User added successfully" });
+    });
+  });
 
 
 
