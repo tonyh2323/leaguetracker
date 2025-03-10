@@ -60,7 +60,8 @@ export const Register = (props) =>{
                 <button type="Submit" onClick={() => PasswordValidation(pass)}disabled={!first || !pass || !last || !email}>Register</button>
                 
                 <HashPassword value={pass}/>
-                <button className="link-btn" onClick={() => navigate("/login")}disabled={!first || !pass || !last || !email}>Already have an account? Login here.</button>
+                
+                <button className="link-btn" onClick={() => navigate("/login")}>Already have an account? Login here.</button>
                 
             </form>
            

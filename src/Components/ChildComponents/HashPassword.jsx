@@ -12,7 +12,7 @@ function HashPassword({value}){
           // Store hash in your password database.
           console.log('Hashed Password , pass:', hash);   
       }  
-      console.log('plainTextPassword:', plainTextPassword);
+      //console.log('plainTextPassword:', plainTextPassword);
 });
 }
 export default HashPassword;
