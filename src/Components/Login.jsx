@@ -1,10 +1,8 @@
 
 import React, {useState } from 'react';
 import Register from './Register';
-import axios from 'axios'
-import {Link, useNavigate} from 'react-router-dom'
 
-import { useNavigate } from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom'
 
 export  const Login = (props) =>{
     const [email, setEmail] = useState('');
@@ -20,12 +18,7 @@ export  const Login = (props) =>{
         e.preventDefault();
          //Perform login logic or validation here
          
-        axios.post('/add_user', values)
-        .then((res)=>{
-            
-            navigate('/')
-            console.log(res)
-    }
+        }
     
     return (
         <div className='auth-form-container'>

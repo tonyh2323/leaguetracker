@@ -1,5 +1,6 @@
 
 import React, {useState} from 'react';
+import axios from 'axios'
 import login from './Login';
 import Home from './Home';
 import { useNavigate } from 'react-router-dom';
@@ -7,29 +8,41 @@ import PasswordValidation from './ChildComponents/PasswordValidation';
 import HashPassword from './ChildComponents/HashPassword';
 
 export const Register = (props) =>{
-        const [email, setEmail] = useState('');
-        const [pass, setPass] = useState('');
-        const [first, setfirst] = useState('');
-        const [last, setlast] = useState('');
-        const [isShown, setIsSHown] = useState(false);
-        const togglePassword = () => {
-            setIsSHown((isShown) => !isShown);
-          };
-        const navigate = useNavigate();
+    const [email, setEmail] = useState('');
+    const [pass, setPass] = useState('');
+    const [first, setfirst] = useState('');
+    const [last, setlast] = useState('');
+    const [isShown, setIsSHown] = useState(false);
+    const togglePassword = () => {
+        setIsSHown((isShown) => !isShown);
+      };
+    const navigate = useNavigate();
 
-        const handleSubmit = (e) =>{
-            e.preventDefault();     
+    const handleSubmit = (e) =>{
+        e.preventDefault();     
 
-        const form = document.querySelector("form");
-        form.addEventListener('submit', (event) => {
-            const password = event.target.password.value;
-            if (!PasswordValidation(password)) {
-                alert('Password requires uppercase and lowercase letters, a number ,and a special character.  Password must be at least 8 units in length.');
-                event.preventDefault();
-            }
+        axios.post('/add_user', values)
+        .then((res)=>{
+            
+            navigate('/')
+            console.log(res)
+        })
+        .catch((err)=>console.log(err))
 
-        });
-    }
+
+    const form = document.querySelector("form");
+    form.addEventListener('submit', (event) => {
+        const password = event.target.password.value;
+        if (!PasswordValidation(password)) {
+            alert('Password requires uppercase and lowercase letters, a number ,and a special character.  Password must be at least 8 units in length.');
+            event.preventDefault();
+        }
+
+    });
+}
+
+
+
 
     return (
         <div className='auth-form-container'>
