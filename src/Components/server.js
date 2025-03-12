@@ -1,5 +1,5 @@
 const express = require("express");
-const mysql = require("mysql2");
+const mysql = require("mysql");
 const cors = require("cors");
 const path = require("path");
 const app = express();
@@ -16,22 +16,14 @@ const db = mysql.createConnection({
   database: "leaguetracker",
 });
 
-
+console.log('start');
 
 // Start the server
-const PORT = process.env.PORT || 3306;
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`listening on port ${port} `);
 });
 
 //Setting Up Database Connection
-sql.connect(config).then(pool => {
-  if (pool.connected) {
-      console.log('Connected to SQL Server');
-  }
-}).catch(err => {
-  console.error('Database Connection Failed: ', err);
-});
 
 
 
@@ -45,3 +37,4 @@ app.post("/add_user", (req, res) => {
     return res.json({ success: "Student added successfully" });
   });
 });
+
