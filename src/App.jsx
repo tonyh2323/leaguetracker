@@ -2,7 +2,7 @@ import {React , useState }from 'react';
 
 import { Outlet , BrowserRouter} from "react-router-dom";
 import Login from './Components/Login';
-import  Register  from './Components/Register';
+import  Register  from '/Register';
 import './css/App.css';
 import './css/Navbar.css';
 import Header from './Components/ChildComponents/Header';
@@ -25,7 +25,6 @@ function App() {
     <div className="App">
      
       <BrowserRouter>
-     
         <Navbar />
         <AppRouter />
       </BrowserRouter>

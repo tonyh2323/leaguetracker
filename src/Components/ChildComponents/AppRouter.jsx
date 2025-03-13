@@ -6,7 +6,7 @@ import Coaches from '../Coaches';
 import Parents from '../Parents';
 import Contact from '../Contact';
 import About from '../About';
-import Register from '../Register';
+import Register from '/Register';
 
 
 import Home from '../Home';

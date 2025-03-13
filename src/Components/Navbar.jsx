@@ -7,6 +7,7 @@ const Navbar = () => {
             
             <div className="navbar-left">
                 <a href="/" className="logo">LeagueTracker</a>
+                
             </div>
             <ul>
                 <li><Link to="/">Home</Link>{""}</li>

@@ -1,6 +1,6 @@
 
 import React, {useState } from 'react';
-import Register from './Register';
+import Register from '/Register';
 
 import {Link, useNavigate} from 'react-router-dom'
 

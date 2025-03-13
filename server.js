@@ -3,31 +3,24 @@ const mysql = require("mysql");
 const cors = require("cors");
 const path = require("path");
 const app = express();
-//path.resolve()
+
 app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
 app.use(express.json());
 
-const port = 3306;
+const port = 5000;
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "root",
+  password: "",
   database: "leaguetracker",
 });
 
-console.log('start');
-
-// Start the server
-app.listen(port, () => {
-  console.log(`listening on port ${port} `);
-});
-
-//Setting Up Database Connection
 
 
 
 app.post("/add_user", (req, res) => {
+  console.log('attempting to add a user');
   const sql =
     "INSERT INTO user (`first`,`email`) VALUES (?, ?)";
   const values = [req.body.first, req.body.email];
@@ -38,3 +31,17 @@ app.post("/add_user", (req, res) => {
   });
 });
 
+app.get("/get_user/:id", (req, res) => {
+  const id = req.params.id;
+  const sql = "SELECT * FROM user WHERE `id`= ?";
+  db.query(sql, [id], (err, result) => {
+    if (err) res.json({ message: "Server error" });
+    return res.json(result);
+  });
+});
+
+
+// Start the server
+app.listen(port, () => {
+  console.log(`Reporting from server file: listening on port ${port} `); 
+});
