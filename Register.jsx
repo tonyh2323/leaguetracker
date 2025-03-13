@@ -26,7 +26,7 @@ function Register(){
         e.preventDefault()     
 
         console.log('attempting to add a user');
-        axios.post('/add_user', values)
+        axios.post('http://localhost:3306/add_user', values)
         .then((res)=>{  
             navigate('/')
             console.log(res)
