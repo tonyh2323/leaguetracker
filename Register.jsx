@@ -25,14 +25,15 @@ function Register(){
     function handleSubmit (e) {
         e.preventDefault()     
 
-        console.log('attempting to add a user');
-        axios.post('http://localhost:3306/add_user', values)
+       
+        axios.post('http://localhost:5000/add_user', values)
         .then((res)=>{  
             navigate('/')
             console.log(res)
         })
-        .catch((err)=>console.log(err))
-
+        .catch((err)=>console.log("error",err))
+        navigate('/')
+        
     const form = document.querySelector("form");
     form.addEventListener('submit', (event) => {
         const password = event.target.password.value;
