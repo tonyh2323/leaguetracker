@@ -8,18 +8,18 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
 app.use(express.json());
 
-const port = 5000;
+const port = 3306;
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "",
+  password: "root",
   database: "leaguetracker",
 });
 
 
 
 
-app.post("/add_user", (req, res) => {
+app.post("http://localhost:3306/add_user", (req, res) => {
   console.log('attempting to add a user');
   const sql =
     "INSERT INTO user (`first`,`email`) VALUES (?, ?)";
@@ -39,9 +39,13 @@ app.get("/get_user/:id", (req, res) => {
     return res.json(result);
   });
 });
-
+app.get("/", (req, res) => {
+  res.send("Hello from Express!");
+});
 
 // Start the server
+
 app.listen(port, () => {
-  console.log(`Reporting from server file: listening on port ${port} `); 
+  console.log(`Reporting from server: listening on port ${port} `); 
+
 });

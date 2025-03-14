@@ -1,8 +1,8 @@
 {
-  "name": "server",
+  "name": "leaguetracker",
   "private": true,
   "version": "0.0.0",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "dev": "vite",
     "type": "module",
@@ -10,9 +10,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "echo\"Error: no test specified\" && 1",
-    "start": "node server.js",
+    "start": " node   index.js ",
     "client": "npm run start --prefix client",
-    "server": "nodemon server.js"
+    "server": "nodemon index.js"
   },
   "dependencies": {
     "axios": "^1.8.3",

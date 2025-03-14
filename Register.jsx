@@ -24,12 +24,15 @@ function Register(){
 
     function handleSubmit (e) {
         e.preventDefault()     
-
+       console.log('password before sending..',values.pass);
+        HashPassword(values.pass)
+        console.log('Hashed Pass' , hash);
        
-        axios.post('http://localhost:5000/add_user', values)
+        axios.post('http://localhost:3306/add_user', values)
         .then((res)=>{  
+            
+            console.log('inside error',res)
             navigate('/')
-            console.log(res)
         })
         .catch((err)=>console.log("error",err))
         navigate('/')
@@ -55,7 +58,7 @@ function Register(){
                 <div className="side-by-side">
 
                 
-                    <input type="text" name='first' required onChange={(e) => setValues({...values, first: e.target.value})} placeholder='First name' id='First'/>
+                    <input type="text" name='first' required onChange={(e) => setValues({...values, first: e.target.value})} placeholder='First name' id='first'/>
 
                     <input type="text" required  onChange={(e) => setValues({...values, last: e.target.value})} name='last' id='last' placeholder='Last Name'/>
                 </div>
@@ -78,7 +81,7 @@ function Register(){
                 <button type="Submit" onClick={() => PasswordValidation(...values.pass)}>Register</button>
                 
                
-                
+                 
             </form>
                 
                 <button className="link-btn" onClick={() => navigate("/login")}>Already have an account? Login here.</button>

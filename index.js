@@ -1,15 +1,10 @@
-// Import the library
+const express = require("express");
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+const port = process.env.PORT || 3001;
+const app = express();
 
+app.get("/home.jsx", (req, res) => {
+  res.json({ message: "Hello from server!" });
+  
+});
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    console.log("reporting from Index file");
-    <App />
-  </React.StrictMode>
-);
