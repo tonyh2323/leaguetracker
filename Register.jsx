@@ -24,9 +24,8 @@ function Register(){
 
     function handleSubmit (e) {
         e.preventDefault()     
-       console.log('password before sending..',values.pass);
         HashPassword(values.pass)
-        console.log('Hashed Pass' , hash);
+      //  console.log('Hashed Pass' , hash);
        
         axios.post('http://localhost:3306/add_user', values)
         .then((res)=>{  
