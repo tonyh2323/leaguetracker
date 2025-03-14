@@ -1,8 +1,8 @@
-import React from 'react';
 import bcrypt from "bcryptjs";
 
 
 function HashPassword(value){
+     
       const saltRounds = 10;
       const plainTextPassword = value;
 
@@ -11,10 +11,12 @@ function HashPassword(value){
             console.error(err);
           // Store hash in your password database.   
       }  
-      console.log('plainTextPassword:', plainTextPassword);
+    //  console.log('plainTextPassword:', plainTextPassword);
      console.log('Hashed Password ready to store' , hash); 
+      return hash;
 });
 }
+
 export default HashPassword;
 
       

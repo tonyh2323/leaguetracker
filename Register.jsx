@@ -7,6 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import PasswordValidation from './src/Components/ChildComponents/PasswordValidation';
 import HashPassword from './src/Components/ChildComponents/HashPassword';
 
+
 function Register(){
     const [values, setValues] = useState({
         email: '',
@@ -24,10 +25,11 @@ function Register(){
 
     function handleSubmit (e) {
         e.preventDefault()     
-        HashPassword(values.pass)
-      //  console.log('Hashed Pass' , hash);
+     
+        
        
         axios.post('http://localhost:3306/add_user', values)
+        
         .then((res)=>{  
             
             console.log('inside error',res)
@@ -35,7 +37,10 @@ function Register(){
         })
         .catch((err)=>console.log("error",err))
         navigate('/')
-        
+           HashPassword(values.pass)
+
+
+
     const form = document.querySelector("form");
     form.addEventListener('submit', (event) => {
         const password = event.target.password.value;
