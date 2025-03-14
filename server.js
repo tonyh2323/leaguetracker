@@ -22,8 +22,8 @@ const db = mysql.createConnection({
 app.post("http://localhost:3306/add_user", (req, res) => {
   console.log('attempting to add a user');
   const sql =
-    "INSERT INTO user (`first`,`email`) VALUES (?, ?)";
-  const values = [req.body.first, req.body.email];
+    "INSERT INTO user (`first`) VALUES (?, ?)";
+  const values = [req.body.first];
   db.query(sql, values, (err, result) => {
     if (err)
       return res.json({ message: "Something unexpected has occured" + err });
