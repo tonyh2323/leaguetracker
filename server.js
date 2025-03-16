@@ -1,5 +1,9 @@
-const express = require("express");
+
+
 const mysql = require("mysql");
+
+const express = require("express");
+
 const cors = require("cors");
 const path = require("path");
 const app = express();
@@ -16,15 +20,13 @@ const db = mysql.createConnection({
   database: "leaguetracker",
 });
 
-
-
-
-app.post("http://localhost:3306/add_user", (req, res) => {
-  console.log('attempting to add a user');
-  const sql =
-    "INSERT INTO user (`first`) VALUES (?, ?)";
-  const values = [req.body.first];
-  db.query(sql, values, (err, result) => {
+app.post("/add_user", (req, res) => {
+  res.json({ message: "Hello from post!" });
+  /* const values = [req.body.first];
+   const {first} = [register.body.first];
+   const sql ="INSERT INTO user (`first`) VALUES (?)";*/
+ 
+  db.query(sql, [first], (err, result) => {
     if (err)
       return res.json({ message: "Something unexpected has occured" + err });
     return res.json({ success: "Student added successfully" });
@@ -39,13 +41,5 @@ app.get("/get_user/:id", (req, res) => {
     return res.json(result);
   });
 });
-app.get("/", (req, res) => {
-  res.send("Hello from Express!");
-});
 
-// Start the server
 
-app.listen(port, () => {
-  console.log(`Reporting from server: listening on port ${port} `); 
-
-});

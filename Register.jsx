@@ -18,21 +18,20 @@ function Register(){
         setIsSHown((isShown) => !isShown);
       };
     const navigate = useNavigate();
-
+   
+    
     function handleSubmit (e) {
         e.preventDefault()     
-     
+        axios.get('status', (req,res,next)=> res.sendStatus(200));
         
-       
-        axios.post('http://localhost:3306/add_user', values)
-        
+        axios.post('http://localhost:3306/add_user',{values})
         .then((res)=>{  
-            
             console.log('inside error',res)
             navigate('/')
         })
         .catch((err)=>console.log("error",err))
-        navigate('/')
+        
+        /navigate('/Login')
          
 
 

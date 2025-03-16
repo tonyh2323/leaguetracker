@@ -17,7 +17,22 @@ import AppRouter from './Components/ChildComponents/AppRouter';
 
 function App() {
 
-  const [currentForm, setCurrentForm] = useState('login');
+  const [message, setMessage] = useState({});
+
+ 
+  async function callHelloApi(){
+    try {
+      const respone = await fetch("http://localhost:3306/api/hello");
+      if(!response.ok){
+        
+      }
+      const data = await response.json();
+      setMessage(data);
+      console.log(data);
+    } catch(error){
+      console.error('Error Message: ', error);
+    }
+  }
 
   const toggleForm = (formName) => {
     setCurrentForm(formName);
